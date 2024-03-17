@@ -10,15 +10,15 @@ class App(mglw.WindowConfig):
         self.quad = mglw.geometry.quad_fs()
         self.program = self.load_program(vertex_shader='vertex.glsl', fragment_shader='fragment.glsl')
         self.u_scroll = 3.0
-        # textures
-        self.texture1 = self.load_texture_2d('../textures/test0.png')
-        self.texture2 = self.load_texture_2d('../textures/hex.png')  # floor
-        self.texture3 = self.load_texture_2d('../textures/white_marble1.png')  # walls
-        self.texture4 = self.load_texture_2d('../textures/roof/texture3.jpg')  # roof
-        self.texture5 = self.load_texture_2d('../textures/black_marble1.png')  # pedestal
-        self.texture6 = self.load_texture_2d('../textures/green_marble1.png')  # sphere
-        self.texture7 = self.load_texture_2d('../textures/roof/height3.png')  # roof bump
-        # uniforms
+
+        self.texture1 = self.load_texture_2d('../test0.png')
+        self.texture2 = self.load_texture_2d('../hex.png')
+        self.texture3 = self.load_texture_2d('../white_marble1.png')
+        self.texture4 = self.load_texture_2d('../texture3.jpg')
+        self.texture5 = self.load_texture_2d('../black_marble1.png')
+        self.texture6 = self.load_texture_2d('../green_marble1.png')
+        self.texture7 = self.load_texture_2d('../height3.png')
+
         self.program['u_scroll'] = self.u_scroll
         self.program['u_resolution'] = self.window_size
         self.program['u_texture1'] = 1
